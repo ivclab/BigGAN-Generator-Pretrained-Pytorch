@@ -2,15 +2,21 @@
 Pytorch implementation of the generator of Large Scale GAN Training for High Fidelity Natural Image Synthesis (BigGAN). 
 
 # Download Pretrained Weights 
-
+The Pretrained weights can be downloaded from the latest release. [link](
+https://github.com/ivclab/BigGAN-Generator-Pretrained-Pytorch/releases/latest) 
 
 # Demo 
+- To run the code, please download the pretrained weights first.
 ```shell 
 python demo.py -w <PRETRAINED_WEIGHT_PATH> [-s IMAGE_SIZE] [-c CLASS_LABEL] [-t TRUNCATION] 
 python demo.py -w ./biggan512-release.pt -s 512 -t 0.3 -c 156 
 python demo.py -w ./biggan256-release.pt -s 256 -t 0.02 -c 11 
 python demo.py --pretrained_weight ./biggan128-release.pt --size 128 --truncation 0.2 --class_label 821 
-```
+``` 
+- Valid image size: 128, 256, 512
+- Valid class label: 0~999
+- Valid truncation: 0.02~1.0
+
 
 # Results 
 |![alt text](./assets/p1.png)|
@@ -22,7 +28,14 @@ python demo.py --pretrained_weight ./biggan128-release.pt --size 128 --truncatio
 |*class 821 (512 x 512)*|
 
 # Dependencies 
-Please refer to the environment.yml file. 
+dependencies:
+  - python=3.6
+  - cudatoolkit=10.0
+  - pytorch
+  - torchvision
+  - scipy
+
+Please also refer to the environment.yml file. 
 
 # Pretrained Weights 
 The pretrained weights are converted from the tensorflow hub modules: 
