@@ -46,5 +46,10 @@ The pretrained weights are converted from the tensorflow hub modules:
 
 
 # References 
-paper: https://arxiv.org/abs/1809.11096 
+paper: https://arxiv.org/abs/1809.11096
 
+https://github.com/ajbrock/BigGAN-PyTorch
+
+# Contact 
+
+Please feel free to leave suggestions or comments to [Tsung-Hung Hsieh](https://github.com/nemothh)(andrewhsiehth@gmail.com).
